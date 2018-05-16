@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive Sliding Navigation Bar</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	<link rel="stylesheet" href="styles.css">
+	<script>
+		$(function(){
+			$(".fa-times").hide();
+
+			$(".fa-bars").click(function(){
+			  $(this).hide();
+			  $(".fa-times").show();
+			  $(".mob-nav-bar").css("left", "0px");
+			});
+
+			$(".fa-times").click(function(){
+			  $(this).hide();
+			  $(".fa-bars").show();
+			  $(".mob-nav-bar").css("left", "-250px");
+			});	
+
+		});
+	</script>
+</head>
+<body>
+
+
+
+<div class="container">
+  <div class="desk-nav-bar">
+    <ul>
+      <li class="active"><a href="#">home</a></li>
+      <li><a href="#">portfolio</a></li>
+      <li><a href="#">services</a></li>
+      <li><a href="#">team</a></li>
+      <li><a href="#">aboutus</a></li>
+    </ul>
+  </div>
+  
+  <div class="hamburger-btn">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+  </div>
+  
+  <div class="mob-nav-bar">
+    <ul>
+      <li><a href="#">home</a></li>
+      <li><a href="#">portfolio</a></li>
+      <li><a href="#">services</a></li>
+      <li><a href="#">team</a></li>
+      <li><a href="#">aboutus</a></li>
+    </ul>
+  </div>
+</div>	
+
+</body>
+</html>
